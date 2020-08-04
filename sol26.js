@@ -120,3 +120,59 @@ function convertCF(num, scale) {
   else if (scale == "c") return (num - 32) / 1.8;
   else return;
 }
+
+function square(n) {
+  return n * n;
+}
+
+//
+
+function howManyDalmations(number) {
+  var dogs = [
+    "Hardly any",
+    "More than a handful!",
+    "Woah that's a lot of dogs!",
+    "101 DALMATIONS!!!",
+  ];
+  var respond =
+    number <= 10
+      ? dogs[0]
+      : number <= 50
+      ? dogs[1]
+      : number == 101
+      ? dogs[3]
+      : dogs[2];
+
+  return respond;
+}
+//
+
+var websites = [];
+for (let i = 0; i < 1000; i++) {
+  websites.push("codewars");
+}
+
+//
+function reverse(string) {
+  //your code here
+  return string.split(" ").reverse().trim().join(" ");
+}
+
+function formatMoney(amount) {
+  // your formatting code here
+  amount = amount.toString();
+  let dollars = amount.split(".")[0];
+  let cents = amount.split(".")[1];
+  if (cents == 0) return `${$dollars}.00`;
+  else if (cents < 10) return `${$dollars}.${cents}0`;
+  else return `${$dollars}.${cents}`;
+}
+
+//
+function generateRange(min, max, step) {
+  let result = [];
+  for (let i = min; i <= max; step++) {
+    result.push(i);
+  }
+  return result;
+}
